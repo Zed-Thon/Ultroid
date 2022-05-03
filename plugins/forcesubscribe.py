@@ -50,7 +50,7 @@ from . import (
 CACHE = {}
 
 
-@ultroid_cmd(pattern="fsub( (.*)|$)", admins_only=True, groups_only=True)
+@ultroid_cmd(pattern="اشتراك( (.*)|$)", admins_only=True, groups_only=True)
 async def addfor(e):
     match = e.pattern_match.group(1).strip()
     if not match:
@@ -60,35 +60,35 @@ async def addfor(e):
     except BaseException:
         return await e.eor(get_string("fsub_2"), time=5)
     add_forcesub(e.chat_id, match)
-    await e.eor("Added ForceSub in This Chat !")
+    await e.eor("**✾╎تـم اضـافة الاشتـراك الاجبـاري هنـا .. بنجـاح ✓**")
     ultroid_bot.add_handler(force_sub, events.NewMessage(incoming=True))
 
 
-@ultroid_cmd(pattern="remfsub$")
+@ultroid_cmd(pattern="الغاء الاشتراك$")
 async def remor(e):
     res = rem_forcesub(e.chat_id)
     if not res:
         return await e.eor(get_string("fsub_3"), time=5)
-    await e.eor("Removed ForceSub...")
+    await e.eor("**✾╎تـم الغـاء الاشتـراك الاجبـاري .. بنجـاح ✓**")
 
 
-@ultroid_cmd(pattern="checkfsub$")
+@ultroid_cmd(pattern="الاشتراك$")
 async def getfsr(e):
     res = get_forcesetting(e.chat_id)
     if not res:
-        return await e.eor("ForceSub is Not Active In This Chat !", time=5)
+        return await e.eor("**✾╎الاشتـراك الاجبـاري غيـر مفعـل هنـا..**", time=5)
     cha = await e.client.get_entity(int(res))
-    await e.eor(f"**ForceSub Status** : `Active`\n- **{cha.title}** `({res})`")
+    await e.eor(f"**✾╎حـالة الاشتـراك الاجبـاري : مفعـل مسبقـاً ✓**\n\n**✾╎{cha.title}** `({res})`")
 
 
-@in_pattern("fsub( (.*)|$)", owner=True)
+@in_pattern("اشتراك( (.*)|$)", owner=True)
 async def fcall(e):
     match = e.pattern_match.group(1).strip()
     spli = match.split("_")
     user = await ultroid_bot.get_entity(int(spli[0]))
     cl = await ultroid_bot.get_entity(int(spli[1]))
-    text = f"Hi {inline_mention(user)}, You Need to Join"
-    text += f" {cl.title} in order to Chat in this Group."
+    text = f"**✾╎مرحبـاً {inline_mention(user)}, قم بالاشتـراك بالقنـاة**"
+    text += f"**✾╎{cl.title} لـ السمـاح لك بالدردشـه هنـا ✓**"
     if not cl.username:
         el = (await ultroid_bot(ExportChatInviteRequest(cl))).link
     else:
@@ -120,7 +120,7 @@ async def diesoon(e):
             raise UserNotParticipantError("")
     except UserNotParticipantError:
         return await e.answer(
-            "Please Join That Channel !\nThen Click This Button !", alert=True
+            "**✾╎عـذراً .. يجب عليك الاشتراك بـ القنـاة!**\n**✾╎ثـم الضغـط ع الـزر بالاسفـل لـ التحقق ✓**", alert=True
         )
     await ultroid_bot.edit_permissions(
         e.chat_id, int(spli[0]), send_messages=True, until_date=None
