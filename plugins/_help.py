@@ -39,29 +39,29 @@ _main_help_menu = [
 ]
 
 
-@ultroid_cmd(pattern="help( (.*)|$)")
+@ultroid_cmd(pattern="اوامري( (.*)|$)")
 async def _help(ult):
     plug = ult.pattern_match.group(1).strip()
     chat = await ult.get_chat()
     if plug:
         try:
             if plug in HELP["Official"]:
-                output = f"**Plugin** - `{plug}`\n"
+                output = f"**الاضـافـات** - `{plug}`\n"
                 for i in HELP["Official"][plug]:
                     output += i
-                output += "\n© @TeamUltroid"
+                output += "\n© @ZedThon"
                 await ult.eor(output)
             elif HELP.get("Addons") and plug in HELP["Addons"]:
-                output = f"**Plugin** - `{plug}`\n"
+                output = f"**الاضـافـات** - `{plug}`\n"
                 for i in HELP["Addons"][plug]:
                     output += i
-                output += "\n© @TeamUltroid"
+                output += "\n© @ZedThon"
                 await ult.eor(output)
             elif HELP.get("VCBot") and plug in HELP["VCBot"]:
-                output = f"**Plugin** - `{plug}`\n"
+                output = f"**الاضـافـات** - `{plug}`\n"
                 for i in HELP["VCBot"][plug]:
                     output += i
-                output += "\n© @TeamUltroid"
+                output += "\n© @ZedThon"
                 await ult.eor(output)
             else:
                 try:
@@ -69,7 +69,7 @@ async def _help(ult):
                     for d in LIST[plug]:
                         x += HNDLR + d
                         x += "\n"
-                    x += "\n© @TeamUltroid"
+                    x += "\n© @ZedThon"
                     await ult.eor(x)
                 except BaseException:
                     file = None
@@ -90,7 +90,7 @@ async def _help(ult):
                             best_match = extractOne(plug, compare_strings)
                             text += "\nDid you mean `{}`?".format(best_match[0])
                         return await ult.eor(text)
-                    output = f"**Command** `{plug}` **found in plugin** - `{file}`\n"
+                    output = f"**الامـر** `{plug}` **تم ايجـاده في الاضـافه** - `{file}`\n"
                     if file in HELP["Official"]:
                         for i in HELP["Official"][file]:
                             output += i
@@ -100,7 +100,7 @@ async def _help(ult):
                     elif HELP.get("VCBot") and file in HELP["VCBot"]:
                         for i in HELP["VCBot"][file]:
                             output += i
-                    output += "\n© @TeamUltroid"
+                    output += "\n© @ZedThon"
                     await ult.eor(output)
         except BaseException as er:
             LOGS.exception(er)
