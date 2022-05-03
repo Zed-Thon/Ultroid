@@ -32,7 +32,7 @@ from . import HNDLR, LOGS, eor, get_string, udB, ultroid_bot, ultroid_cmd
 
 
 @ultroid_cmd(
-    pattern="addch( (.*)|$)",
+    pattern="اضافة قناة( (.*)|$)",
     allow_sudo=False,
 )
 async def broadcast_adder(event):
@@ -89,7 +89,7 @@ async def broadcast_adder(event):
 
 
 @ultroid_cmd(
-    pattern="remch( (.*)|$)",
+    pattern="حذف قناة( (.*)|$)",
     allow_sudo=False,
 )
 async def broadcast_remover(event):
@@ -110,7 +110,7 @@ async def broadcast_remover(event):
 
 
 @ultroid_cmd(
-    pattern="listchannels$",
+    pattern="القنوات$",
 )
 async def list_all(event):
     x = await event.eor(get_string("com_1"))
@@ -143,7 +143,7 @@ async def list_all(event):
 
 
 @ultroid_cmd(
-    pattern="forward$",
+    pattern="توجيه$",
     allow_sudo=False,
 )
 async def forw(event):
@@ -186,7 +186,7 @@ async def forw(event):
 
 
 @ultroid_cmd(
-    pattern="broadcast( (.*)|$)",
+    pattern="اذاعه( (.*)|$)",
     allow_sudo=False,
 )
 async def sending(event):
