@@ -267,7 +267,7 @@ async def _(event):
 
 
 @ultroid_cmd(
-    pattern="info( (.*)|$)",
+    pattern="ايدي( (.*)|$)",
     manager=True,
 )
 async def _(event):
@@ -305,7 +305,7 @@ async def _(event):
     try:
         full_user = (await event.client(GetFullUserRequest(user))).full_user
     except Exception as er:
-        return await xx.edit(f"ERROR : {er}")
+        return await xx.edit(f"- خطـأ : {er}")
     user = _
     user_photos = (
         await event.client.get_profile_photos(user.id, limit=0)
