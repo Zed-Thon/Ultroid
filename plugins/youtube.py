@@ -25,7 +25,7 @@ from . import get_string, requests, ultroid_cmd
 
 
 @ultroid_cmd(
-    pattern="yt(a|v|sa|sv) ?(.*)",
+    pattern="تحميل(صوت|فيديو|sa|sv) ?(.*)",
 )
 async def download_from_youtube_(event):
     ytd = {
@@ -36,7 +36,7 @@ async def download_from_youtube_(event):
     }
     opt = event.pattern_match.group(1).strip()
     xx = await event.eor(get_string("com_1"))
-    if opt == "a":
+    if opt == "صوت":
         ytd["format"] = "bestaudio"
         ytd["outtmpl"] = "%(id)s.m4a"
         url = event.pattern_match.group(2)
@@ -46,7 +46,7 @@ async def download_from_youtube_(event):
             requests.get(url)
         except BaseException:
             return await xx.eor(get_string("youtube_2"))
-    elif opt == "v":
+    elif opt == "فيديو":
         ytd["format"] = "best"
         ytd["outtmpl"] = "%(id)s.mp4"
         ytd["postprocessors"] = [{"key": "FFmpegMetadata"}]
