@@ -54,30 +54,30 @@ def text_to_url(event):
 
 _buttons = {
     "otvars": {
-        "text": "Other Variables to set for @TheUltroid:",
+        "text": "- الفـارات الخـاصـه بسـورس زدثـــون @ZedThon:",
         "buttons": [
             [
-                Button.inline("Tᴀɢ Lᴏɢɢᴇʀ", data="taglog"),
-                Button.inline("SᴜᴘᴇʀFʙᴀɴ", data="cbs_sfban"),
+                Button.inline("تخـزين الكـروب/الخـاص", data="taglog"),
+                Button.inline("الحظـر العـام", data="cbs_sfban"),
             ],
             [
-                Button.inline("Sᴜᴅᴏ Mᴏᴅᴇ", data="sudo"),
-                Button.inline("Hᴀɴᴅʟᴇʀ", data="hhndlr"),
+                Button.inline("المطـور المسـاعد", data="sudo"),
+                Button.inline("نقطـة الاوامـر", data="hhndlr"),
             ],
             [
-                Button.inline("Exᴛʀᴀ Pʟᴜɢɪɴs", data="plg"),
-                Button.inline("Aᴅᴅᴏɴs", data="eaddon"),
+                Button.inline("الاضـافـات", data="plg"),
+                Button.inline("الدونـات", data="eaddon"),
             ],
             [
-                Button.inline("Eᴍᴏᴊɪ ɪɴ Hᴇʟᴘ", data="emoj"),
-                Button.inline("Sᴇᴛ ɢDʀɪᴠᴇ", data="gdrive"),
+                Button.inline("ايمـوجي اللوحـه", data="emoj"),
+                Button.inline("الاقـراص", data="gdrive"),
             ],
             [
-                Button.inline("Iɴʟɪɴᴇ Pɪᴄ", data="inli_pic"),
-                Button.inline("Sᴜᴅᴏ HNDLR", data="shndlr"),
+                Button.inline("صـورة الانـلاين", data="inli_pic"),
+                Button.inline("نقطـة المطـور", data="shndlr"),
             ],
-            [Button.inline("Dᴜᴀʟ Mᴏᴅᴇ", "cbs_oofdm")],
-            [Button.inline("« Bᴀᴄᴋ", data="setter")],
+            [Button.inline("الوضـع الثنـائي", "cbs_oofdm")],
+            [Button.inline("« رجـوع", data="setter")],
         ],
     },
     "sfban": {
@@ -93,52 +93,52 @@ _buttons = {
         "buttons": [
             [Button.inline("Aᴜᴛᴏ Aᴘᴘʀᴏᴠᴇ ON", data="apon")],
             [Button.inline("Aᴜᴛᴏ Aᴘᴘʀᴏᴠᴇ OFF", data="apof")],
-            [Button.inline("« Bᴀᴄᴋ", data="cbs_pmcstm")],
+            [Button.inline("« رجـوع", data="cbs_pmcstm")],
         ],
     },
     "alvcstm": {
         "text": f"Customise your {HNDLR}alive. Choose from the below options -",
         "buttons": [
-            [Button.inline("Aʟɪᴠᴇ Tᴇxᴛ", data="abs_alvtx")],
-            [Button.inline("Aʟɪᴠᴇ ᴍᴇᴅɪᴀ", data="alvmed")],
-            [Button.inline("Dᴇʟᴇᴛᴇ Aʟɪᴠᴇ Mᴇᴅɪᴀ", data="delmed")],
-            [Button.inline("« Bᴀᴄᴋ", data="setter")],
+            [Button.inline("كليشـة الفحـص", data="abs_alvtx")],
+            [Button.inline("صـورة الفحـص", data="alvmed")],
+            [Button.inline("حـذف صـورة الفحـص", data="delmed")],
+            [Button.inline("« رجـوع", data="setter")],
         ],
     },
     "pmcstm": {
         "text": "Customise your PMPERMIT Settings -",
         "buttons": [
             [
-                Button.inline("Pᴍ Tᴇxᴛ", data="pmtxt"),
-                Button.inline("Pᴍ Mᴇᴅɪᴀ", data="pmmed"),
+                Button.inline("كليشـة الحمـايه", data="pmtxt"),
+                Button.inline("صـورة الحمـايه", data="pmmed"),
             ],
             [
                 Button.inline("Aᴜᴛᴏ Aᴘᴘʀᴏᴠᴇ", data="cbs_apauto"),
                 Button.inline("PMLOGGER", data="pml"),
             ],
             [
-                Button.inline("Sᴇᴛ Wᴀʀɴs", data="swarn"),
-                Button.inline("Dᴇʟᴇᴛᴇ Pᴍ Mᴇᴅɪᴀ", data="delpmmed"),
+                Button.inline("ضـع تحـذيرات", data="swarn"),
+                Button.inline("حـذف صـورة الحمـايه", data="delpmmed"),
             ],
-            [Button.inline("PMPermit Type", data="cbs_pmtype")],
-            [Button.inline("« Bᴀᴄᴋ", data="cbs_ppmset")],
+            [Button.inline("حمـاية الخـاص", data="cbs_pmtype")],
+            [Button.inline("« رجـوع", data="cbs_ppmset")],
         ],
     },
     "pmtype": {
         "text": "Select the type of PMPermit needed.",
         "buttons": [
-            [Button.inline("Inline", data="inpm_in")],
-            [Button.inline("Normal", data="inpm_no")],
-            [Button.inline("« Bᴀᴄᴋ", data="cbs_pmcstm")],
+            [Button.inline("وضـع الانـلاين", data="inpm_in")],
+            [Button.inline("الوضـع العـادي", data="inpm_no")],
+            [Button.inline("« رجـوع", data="cbs_pmcstm")],
         ],
     },
     "ppmset": {
         "text": "PMPermit Settings:",
         "buttons": [
-            [Button.inline("Tᴜʀɴ PMPᴇʀᴍɪᴛ Oɴ", data="pmon")],
-            [Button.inline("Tᴜʀɴ PMPᴇʀᴍɪᴛ Oғғ", data="pmoff")],
-            [Button.inline("Cᴜsᴛᴏᴍɪᴢᴇ PMPᴇʀᴍɪᴛ", data="cbs_pmcstm")],
-            [Button.inline("« Bᴀᴄᴋ", data="setter")],
+            [Button.inline("تفعيـل حمـاية الخـاص", data="pmon")],
+            [Button.inline("تعطيـل حمـاية الخـاص", data="pmoff")],
+            [Button.inline("تعييـن حمـاية الخـاص", data="cbs_pmcstm")],
+            [Button.inline("« رجـوع", data="setter")],
         ],
     },
     "chatbot": {
@@ -149,39 +149,39 @@ _buttons = {
                 Button.inline("Cʜᴀᴛ Bᴏᴛ  Oғғ", data="ofchbot"),
             ],
             [
-                Button.inline("Bᴏᴛ Wᴇʟᴄᴏᴍᴇ", data="bwel"),
-                Button.inline("Bᴏᴛ Wᴇʟᴄᴏᴍᴇ Mᴇᴅɪᴀ", data="botmew"),
+                Button.inline("التـرحيب", data="bwel"),
+                Button.inline("التـرحيب ميديـا", data="botmew"),
             ],
-            [Button.inline("Bᴏᴛ Iɴғᴏ Tᴇxᴛ", data="botinfe")],
-            [Button.inline("Fᴏʀᴄᴇ Sᴜʙsᴄʀɪʙᴇ", data="pmfs")],
-            [Button.inline("« Bᴀᴄᴋ", data="setter")],
+            [Button.inline("كليشـة وصـف البـوت", data="botinfe")],
+            [Button.inline("الاشتـراك الاجبـاري", data="pmfs")],
+            [Button.inline("« رجـوع", data="setter")],
         ],
     },
     "vcb": {
         "text": "From This Feature U can play songs in group voice chat\n\n[moreinfo](https://t.me/UltroidUpdates/4)",
         "buttons": [
-            [Button.inline("VC Sᴇssɪᴏɴ", data="abs_vcs")],
-            [Button.inline("« Bᴀᴄᴋ", data="setter")],
+            [Button.inline("جلسـة بـوت الاغـاني", data="abs_vcs")],
+            [Button.inline("« رجـوع", data="setter")],
         ],
     },
     "oofdm": {
         "text": "About [Dual Mode](https://t.me/UltroidUpdates/18)",
         "buttons": [
             [
-                Button.inline("Dᴜᴀʟ Mᴏᴅᴇ Oɴ", "dmof"),
-                Button.inline("Dᴜᴀʟ Mᴏᴅᴇ Oғғ", "dmof"),
+                Button.inline("تفعيـل الوضـع الثنـائي", "dmof"),
+                Button.inline("تعطيـل الوضـع الثنـائي", "dmof"),
             ],
-            [Button.inline("Dᴜᴀʟ Mᴏᴅᴇ Hɴᴅʟʀ", "dmhn")],
-            [Button.inline("« Back", data="cbs_otvars")],
+            [Button.inline("نقطـة الوضـع الثنـائي", "dmhn")],
+            [Button.inline("« رجـوع", data="cbs_otvars")],
         ],
     },
     "apiset": {
         "text": get_string("ast_1"),
         "buttons": [
-            [Button.inline("Remove.bg API", data="abs_rmbg")],
-            [Button.inline("DEEP API", data="abs_dapi")],
-            [Button.inline("OCR API", data="abs_oapi")],
-            [Button.inline("« Back", data="setter")],
+            [Button.inline("كود امر ازالة الخلفيات", data="abs_rmbg")],
+            [Button.inline("كود كاشف الاباحي", data="abs_dapi")],
+            [Button.inline("كود امر ترجمه الصور", data="abs_oapi")],
+            [Button.inline("« رجـوع", data="setter")],
         ],
     },
 }
@@ -250,7 +250,7 @@ TOKEN_FILE = "resources/auths/auth_token.txt"
 async def send(eve):
     key, name = (eve.data_match.group(1)).decode("UTF-8").split("_")
     thumb = "resources/extras/inline.jpg"
-    await eve.answer("■ Sending ■")
+    await eve.answer("■ جـار الارسـال ■")
     data = f"uh_{key}_"
     index = None
     if "|" in name:
@@ -269,7 +269,7 @@ async def send(eve):
             )
         ],
         [
-            Button.inline("« Bᴀᴄᴋ", data=data),
+            Button.inline("« رجـوع", data=data),
         ],
     ]
     try:
@@ -294,12 +294,12 @@ async def update(eve):
             heroku_app = None
             heroku_applications = heroku.apps()
         except BaseException:
-            return await eve.edit("`Wrong HEROKU_API.`")
+            return await eve.edit("`خطـأ HEROKU_API.`")
         for app in heroku_applications:
             if app.name == app_name:
                 heroku_app = app
         if not heroku_app:
-            await eve.edit("`Wrong HEROKU_APP_NAME.`")
+            await eve.edit("`خطـأ HEROKU_APP_NAME.`")
             repo.__del__()
             return
         await eve.edit(get_string("clst_1"))
@@ -350,7 +350,7 @@ async def changes(okk):
                 language="md",
             )
             return await okk.edit(
-                f"**• Ultroid Userbot •**{cli}", file=img, buttons=button
+                f"**• ZThon Userbot •**{cli}", file=img, buttons=button
             )
         except Exception as er:
             LOGS.exception(er)
@@ -403,8 +403,8 @@ async def _(e):
     await e.edit(
         "",
         buttons=[
-            [Button.url("Lɪɴᴋ", link), Button.url("Rᴀᴡ", raw)],
-            [Button.inline("« Bᴀᴄᴋ", data=data)],
+            [Button.url("الرابـط", link), Button.url("التفاصيل", raw)],
+            [Button.inline("« رجـوع", data=data)],
         ],
     )
 
@@ -498,7 +498,7 @@ async def _(e):
                 Button.inline("Folder ID", data="folderid"),
                 Button.inline("Authorise", data="authorise"),
             ],
-            [Button.inline("« Back", data="cbs_otvars")],
+            [Button.inline("« رجـوع", data="cbs_otvars")],
         ],
         link_preview=False,
     )
@@ -553,9 +553,9 @@ async def emoji(event):
     await event.delete()
     pru = event.sender_id
     var = "EMOJI_IN_HELP"
-    name = f"Emoji in `{HNDLR}help` menu"
+    name = f"- الايموجـي المستخـدم بقائمـة امـر `{HNDLR}اوامري` الشفـافه"
     async with event.client.conversation(pru) as conv:
-        await conv.send_message("Send emoji u want to set 🙃.\n\nUse /cancel to cancel.")
+        await conv.send_message("- قـم بارسـال الايمـوجي الذي تريـد وضعـه🙃.\n\n- اضغـط/cancel لـ الالغـاء.")
         response = conv.wait_event(events.NewMessage(chats=pru))
         response = await response
         themssg = response.message.message
@@ -687,12 +687,12 @@ async def hndlrr(event):
 @callback("taglog", owner=True)
 async def tagloggrr(e):
     BUTTON = [
-        [Button.inline("SET TAG LOG", data="abs_settag")],
-        [Button.inline("DELETE TAG LOG", data="deltag")],
+        [Button.inline("وضع تخزين الكروب/الخاص", data="abs_settag")],
+        [Button.inline("تعطيـل الوضـع", data="deltag")],
         get_back_button("cbs_otvars"),
     ]
     await e.edit(
-        "Choose Options",
+        "- اختـر من الاسفـل",
         buttons=BUTTON,
     )
 
@@ -700,20 +700,20 @@ async def tagloggrr(e):
 @callback("deltag", owner=True)
 async def _(e):
     udB.del_key("TAG_LOG")
-    await e.answer("Done!!! Tag Logger has been turned Off")
+    await e.answer("- تم بنجـاح ✓ .. تعطيـل تخـزين الكـروبات/الخـاص")
 
 
 @callback("eaddon", owner=True)
 async def pmset(event):
     if not udB.get_key("ADDONS"):
-        BT = [Button.inline("Aᴅᴅᴏɴs  Oɴ", data="edon")]
+        BT = [Button.inline("تفعيـل الدونـات", data="edon")]
     else:
-        BT = [Button.inline("Aᴅᴅᴏɴs  Oғғ", data="edof")]
+        BT = [Button.inline("تعطيـل الدونـات", data="edof")]
     await event.edit(
         "ADDONS~ Extra Plugins:",
         buttons=[
             BT,
-            [Button.inline("« Bᴀᴄᴋ", data="cbs_otvars")],
+            [Button.inline("« رجـوع", data="cbs_otvars")],
         ],
     )
 
@@ -740,14 +740,14 @@ async def eddof(event):
 @callback("sudo", owner=True)
 async def pmset(event):
     if not udB.get_key("SUDO"):
-        BT = [Button.inline("Sᴜᴅᴏ Mᴏᴅᴇ  Oɴ", data="onsudo")]
+        BT = [Button.inline("تفعيـل المطـور المسـاعد", data="onsudo")]
     else:
-        BT = [Button.inline("Sᴜᴅᴏ Mᴏᴅᴇ  Oғғ", data="ofsudo")]
+        BT = [Button.inline("تعطيـل المطـور المسـاعد", data="ofsudo")]
     await event.edit(
         f"SUDO MODE ~ Some peoples can use ur Bot which u selected. To know More use `{HNDLR}help sudo`",
         buttons=[
             BT,
-            [Button.inline("« Bᴀᴄᴋ", data="cbs_otvars")],
+            [Button.inline("« رجـوع", data="cbs_otvars")],
         ],
     )
 
@@ -863,7 +863,7 @@ async def inl_on(event):
     await setit(event, var, "True")
     await event.edit(
         "Done!! PMPermit type has been set to inline!",
-        buttons=[[Button.inline("« Bᴀᴄᴋ", data="cbs_pmtype")]],
+        buttons=[[Button.inline("« رجـوع", data="cbs_pmtype")]],
     )
 
 
@@ -873,7 +873,7 @@ async def inl_on(event):
     await setit(event, var, "False")
     await event.edit(
         "Done!! PMPermit type has been set to normal!",
-        buttons=[[Button.inline("« Bᴀᴄᴋ", data="cbs_pmtype")]],
+        buttons=[[Button.inline("« رجـوع", data="cbs_pmtype")]],
     )
 
 
@@ -994,7 +994,7 @@ async def dell(event):
     except BaseException:
         return await event.edit(
             get_string("clst_4"),
-            buttons=[[Button.inline("« Sᴇᴛᴛɪɴɢs", data="setter")]],
+            buttons=[[Button.inline("« تعيين صورة الحمايه", data="setter")]],
         )
 
 
@@ -1004,7 +1004,7 @@ async def apon(event):
     await setit(event, var, "True")
     await event.edit(
         "Done!! AUTOAPPROVE  Started!!",
-        buttons=[[Button.inline("« Bᴀᴄᴋ", data="cbs_apauto")]],
+        buttons=[[Button.inline("« رجـوع", data="cbs_apauto")]],
     )
 
 
@@ -1014,7 +1014,7 @@ async def apof(event):
         udB.set_key("AUTOAPPROVE", "False")
         return await event.edit(
             "Done! AUTOAPPROVE Stopped!!",
-            buttons=[[Button.inline("« Bᴀᴄᴋ", data="cbs_apauto")]],
+            buttons=[[Button.inline("« رجـوع", data="cbs_apauto")]],
         )
     except BaseException:
         return await event.edit(
@@ -1026,15 +1026,15 @@ async def apof(event):
 @callback("pml", owner=True)
 async def l_vcs(event):
     if not udB.get_key("PMLOG"):
-        BT = [Button.inline("PMLOGGER ON", data="pmlog")]
+        BT = [Button.inline("تفعيـل تخـزين الخـاص", data="pmlog")]
     else:
-        BT = [Button.inline("PMLOGGER OFF", data="pmlogof")]
+        BT = [Button.inline("تعطيـل تخـزين الخـاص", data="pmlogof")]
     await event.edit(
         "PMLOGGER This Will Forward Ur Pm to Ur Private Group -",
         buttons=[
             BT,
-            [Button.inline("PᴍLᴏɢɢᴇʀ Gʀᴏᴜᴘ", "abs_pmlgg")],
-            [Button.inline("« Bᴀᴄᴋ", data="cbs_pmcstm")],
+            [Button.inline("تخـزين الكـروبات", "abs_pmlgg")],
+            [Button.inline("« رجـوع", data="cbs_pmcstm")],
         ],
     )
 
@@ -1044,7 +1044,7 @@ async def pmlog(event):
     await setit(event, "PMLOG", "True")
     await event.edit(
         "Done!! PMLOGGER  Started!!",
-        buttons=[[Button.inline("« Bᴀᴄᴋ", data="pml")]],
+        buttons=[[Button.inline("« رجـوع", data="pml")]],
     )
 
 
@@ -1054,12 +1054,12 @@ async def pmlogof(event):
         udB.del_key("PMLOG")
         return await event.edit(
             "Done! PMLOGGER Stopped!!",
-            buttons=[[Button.inline("« Bᴀᴄᴋ", data="pml")]],
+            buttons=[[Button.inline("« رجـوع", data="pml")]],
         )
     except BaseException:
         return await event.edit(
             get_string("clst_4"),
-            buttons=[[Button.inline("« Sᴇᴛᴛɪɴɢs", data="setter")]],
+            buttons=[[Button.inline("« الاعـدادات", data="setter")]],
         )
 
 
@@ -1069,7 +1069,7 @@ async def pmonn(event):
     await setit(event, var, "True")
     await event.edit(
         "Done! PMPermit has been turned on!!",
-        buttons=[[Button.inline("« Bᴀᴄᴋ", data="cbs_ppmset")]],
+        buttons=[[Button.inline("« رجـوع", data="cbs_ppmset")]],
     )
 
 
@@ -1079,7 +1079,7 @@ async def pmofff(event):
     await setit(event, var, "False")
     await event.edit(
         "Done! PMPermit has been turned off!!",
-        buttons=[[Button.inline("« Bᴀᴄᴋ", data="cbs_ppmset")]],
+        buttons=[[Button.inline("« رجـوع", data="cbs_ppmset")]],
     )
 
 
@@ -1190,7 +1190,7 @@ async def chon(event):
             event.client.add_event_handler(i, events.NewMessage(**e))
     await event.edit(
         "Done! Now u Can Chat With People Via This Bot",
-        buttons=[Button.inline("« Bᴀᴄᴋ", data="cbs_chatbot")],
+        buttons=[Button.inline("« رجـوع", data="cbs_chatbot")],
     )
 
 
@@ -1203,7 +1203,7 @@ async def chon(event):
             event.client.remove_event_handler(i)
     await event.edit(
         "Done! Chat People Via This Bot Stopped.",
-        buttons=[Button.inline("« Bᴀᴄᴋ", data="cbs_chatbot")],
+        buttons=[Button.inline("« رجـوع", data="cbs_chatbot")],
     )
 
 
@@ -1260,7 +1260,7 @@ async def fdroid_dler(event):
     if FD_MEDIA.get(uri):
         return await event.edit(file=FD_MEDIA[uri])
     await event.answer("• Starting Download •", alert=True)
-    await event.edit("• Downloading.. •")
+    await event.edit("• جـاري التحميـل.. •")
     URL = f"https://f-droid.org/packages/{uri}"
     conte = await async_searcher(URL, re_content=True)
     BSC = bs(conte, "html.parser", from_encoding="utf-8")
@@ -1306,7 +1306,7 @@ async def fdroid_dler(event):
             os.remove(thumb)
             os.remove(file)
             LOGS.exception(er)
-            return await event.edit(f"**ERROR**: `{er}`", buttons=buttons)
+            return await event.edit(f"**خطـأ**: `{er}`", buttons=buttons)
     if msg and hasattr(msg, "media"):
         FD_MEDIA.update({uri: msg.media})
     os.remove(thumb)
