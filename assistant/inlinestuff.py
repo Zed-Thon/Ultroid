@@ -30,8 +30,8 @@ from . import _ult_cache
 
 SUP_BUTTONS = [
     [
-        Button.url("• Repo •", url="https://github.com/TeamUltroid/Ultroid"),
-        Button.url("• Support •", url="t.me/UltroidSupport"),
+        Button.url("• قنـاة السـورس •", url="t.me/ZedThon"),
+        Button.url("• مطـور السـورس •", url="t.me/zzzzl1l"),
     ],
 ]
 
@@ -163,18 +163,18 @@ async def _(e):
     await e.edit(f"Uploaded `{filename}` on {host}.", buttons=Button.url("View", link))
 
 
-@in_pattern("repo", owner=True)
+@in_pattern("السورس", owner=True)
 async def repo(e):
     res = [
         await e.builder.article(
-            title="Ultroid Userbot",
+            title="ZThon Userbot",
             description="Userbot | Telethon",
             thumb=wb(ultpic, 0, "image/jpeg", []),
-            text="• **ULTROID USERBOT** •",
+            text="• **ZThon USERBOT** •",
             buttons=SUP_BUTTONS,
         ),
     ]
-    await e.answer(res, switch_pm="Ultroid Repo.", switch_pm_param="start")
+    await e.answer(res, switch_pm="ZThon Repo.", switch_pm_param="start")
 
 
 @in_pattern("go", owner=True)
