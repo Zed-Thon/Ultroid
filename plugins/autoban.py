@@ -66,7 +66,7 @@ async def channel_del(event):
 
 
 @ultroid_cmd(
-    pattern="autokick (on|off)$",
+    pattern="الدخول (فتح|قفل)$",
     admins_only=True,
     manager=True,
     require="ban_users",
@@ -74,7 +74,7 @@ async def channel_del(event):
 )
 async def _(event):
     match = event.pattern_match.group(1)
-    if match == "on":
+    if match == "قفل":
         if dnd_db.chat_in_dnd(event.chat_id):
             return await event.eor("`Chat already in do not disturb mode.`", time=3)
         dnd_db.add_dnd(event.chat_id)
@@ -82,14 +82,14 @@ async def _(event):
             dnd_func, events.ChatAction(func=lambda x: x.user_joined)
         )
         await event.eor("`Do not disturb mode activated for this chat.`", time=3)
-    elif match == "off":
+    elif match == "فتح":
         if not dnd_db.chat_in_dnd(event.chat_id):
             return await event.eor("`Chat is not in do not disturb mode.`", time=3)
         dnd_db.del_dnd(event.chat_id)
         await event.eor("`Do not disturb mode deactivated for this chat.`", time=3)
 
 
-@ultroid_cmd(pattern="cban$", admins_only=True)
+@ultroid_cmd(pattern="قفل القنوات$", admins_only=True)
 async def ban_cha(ult):
     if autoban_db.is_autoban_enabled(ult.chat_id):
         autoban_db.del_channel(ult.chat_id)
