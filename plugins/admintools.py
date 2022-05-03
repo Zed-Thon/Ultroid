@@ -68,7 +68,7 @@ from . import (
 
 
 @ultroid_cmd(
-    pattern="promote( (.*)|$)",
+    pattern="رفع مشرف( (.*)|$)",
     admins_only=True,
     manager=True,
     require="add_admins",
@@ -100,7 +100,7 @@ async def prmte(ult):
 
 
 @ultroid_cmd(
-    pattern="demote( (.*)|$)",
+    pattern="تنزيل مشرف( (.*)|$)",
     admins_only=True,
     manager=True,
     require="add_admins",
@@ -131,7 +131,7 @@ async def dmote(ult):
 
 
 @ultroid_cmd(
-    pattern="ban( (.*)|$)",
+    pattern="حظر( (.*)|$)",
     admins_only=True,
     manager=True,
     require="ban_users",
@@ -161,7 +161,7 @@ async def bban(ult):
 
 
 @ultroid_cmd(
-    pattern="unban( (.*)|$)",
+    pattern="الغاء حظر( (.*)|$)",
     admins_only=True,
     manager=True,
     require="ban_users",
@@ -191,13 +191,13 @@ async def uunban(ult):
 
 
 @ultroid_cmd(
-    pattern="kick( (.*)|$)",
+    pattern="طرد( (.*)|$)",
     manager=True,
     require="ban_users",
     fullsudo=True,
 )
 async def kck(ult):
-    if "kickme" in ult.text:
+    if "طرد" in ult.text:
         return
     if ult.is_private:
         return await ult.eor("`Use this in Group/Channel.`", time=5)
@@ -229,7 +229,7 @@ async def kck(ult):
 
 
 @ultroid_cmd(
-    pattern="tban( (.*)|$)",
+    pattern="حظر مؤقت( (.*)|$)",
     admins_only=True,
     manager=True,
     require="ban_users",
@@ -269,7 +269,7 @@ async def tkicki(e):
 
 
 @ultroid_cmd(
-    pattern="pin$",
+    pattern="تثبيت$",
     admins_only=True,
     manager=True,
     require="pin_messages",
@@ -293,7 +293,7 @@ async def pin(msg):
 
 
 @ultroid_cmd(
-    pattern="unpin($| (.*))",
+    pattern="الغاء تثبيت($| (.*))",
     admins_only=True,
     manager=True,
     require="pin_messages",
@@ -346,7 +346,7 @@ async def pin_message(ult):
         LOGS.exception(er)
 
 
-@ultroid_cmd(pattern="purge( (.*)|$)", manager=True, require="delete_messages")
+@ultroid_cmd(pattern="تنظيف( (.*)|$)", manager=True, require="delete_messages")
 async def fastpurger(purg):
     match = purg.pattern_match.group(1).strip()
     try:
@@ -383,7 +383,7 @@ async def fastpurger(purg):
 
 
 @ultroid_cmd(
-    pattern="purgeme( (.*)|$)",
+    pattern="حذف رسائلي( (.*)|$)",
 )
 async def fastpurgerme(purg):
     num = purg.pattern_match.group(1).strip()
@@ -431,7 +431,7 @@ async def fastpurgerme(purg):
 
 
 @ultroid_cmd(
-    pattern="purgeall$",
+    pattern="تنظيف الكل$",
 )
 async def _(e):
     if not e.is_reply:
@@ -498,12 +498,12 @@ async def get_all_pinned(event):
 
 
 @ultroid_cmd(
-    pattern="autodelete( (.*)|$)",
+    pattern="تنظيف تلقائي( (.*)|$)",
     admins_only=True,
 )
 async def autodelte(ult):
     match = ult.pattern_match.group(1).strip()
-    if not match or match not in ["24h", "7d", "1m", "off"]:
+    if not match or match not in ["يومي", "اسبوعي", "شهري", "تعطيل"]:
         return await ult.eor("`Please Use in Proper Format..`", time=5)
     if match == "24h":
         tt = 3600 * 24
