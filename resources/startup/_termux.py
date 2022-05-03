@@ -43,7 +43,7 @@ APT_PACKAGES = [
 
 DISCLAIMER_TEXT = ""
 
-COPYRIGHT = f"©️ TeamUltroid {datetime.now().year}"
+COPYRIGHT = f"©️ ZThon {datetime.now().year}"
 
 HEADER = f"""{Fore.MAGENTA}
 ╔╗ ╔╗╔╗  ╔╗            ╔╗
@@ -190,7 +190,7 @@ print(
 █▄▄▄▄▄▄▄█▄▄▄▄▄▄▄█ █▄▄▄█ █▄▄▄█  █▄█▄▄▄▄▄▄▄█▄▄▄█▄▄▄▄▄▄█ 
 {Style.RESET_ALL}
 {Fore.GREEN}- ULTROID Termux Installation -
-  The Main Aim of this script is to deploy Ultroid with basic requirements and save your phone resources.
+  The Main Aim of this script is to deploy Ultrod with basic requirements and save your phone resources.
 {Fore.RESET}
 
 {COPYRIGHT}
@@ -248,8 +248,8 @@ print(with_header(f"\n{Fore.GREEN}You are all Done! 🥳"))
 sleep(0.2)
 print(f"Use 'bash startup' to try running Ultroid.{Fore.RESET}")
 sleep(0.5)
-print("\nYou can head over to @UltroidSupport, if you get stuck somewhere, and need help.")
+print("\nYou can head over to @ZedThon, if you get stuck somewhere, and need help.")
 sleep(0.5)
-print("\nMade with ❤️ by @TeamUltroid...")
+print("\nMade with ❤️ by @ZedThon...")
 
 system("pip3 uninstall colorama -y")
