@@ -46,7 +46,7 @@ from . import async_searcher, con, eod, fast_download, get_string, ultroid_cmd
 
 
 @ultroid_cmd(
-    pattern="github (.*)",
+    pattern="كيثاب (.*)",
 )
 async def gitsearch(event):
     usrname = event.pattern_match.group(1).strip()
@@ -87,7 +87,7 @@ async def gitsearch(event):
 
 
 @ultroid_cmd(
-    pattern="google( (.*)|$)",
+    pattern="جوجل( (.*)|$)",
     manager=True,
 )
 async def google(event):
@@ -108,7 +108,7 @@ async def google(event):
     await x.eor(omk, link_preview=False)
 
 
-@ultroid_cmd(pattern="img( (.*)|$)")
+@ultroid_cmd(pattern="صور( (.*)|$)")
 async def goimg(event):
     query = event.pattern_match.group(1).strip()
     if not query:
@@ -138,7 +138,7 @@ async def goimg(event):
     await nn.delete()
 
 
-@ultroid_cmd(pattern="reverse$")
+@ultroid_cmd(pattern="تحليل$")
 async def reverse(event):
     reply = await event.get_reply_message()
     if not reply:
@@ -187,7 +187,7 @@ async def reverse(event):
 
 
 @ultroid_cmd(
-    pattern="saavn( (.*)|$)",
+    pattern="سافان( (.*)|$)",
 )
 async def siesace(e):
     song = e.pattern_match.group(1).strip()
