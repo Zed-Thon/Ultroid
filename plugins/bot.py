@@ -102,17 +102,17 @@ The Ultroid Userbot
   ◍ Telethon - {}
 """
 
-in_alive = "{}\n\n🌀 <b>Ultroid Version -><b> <code>{}</code>\n🌀 <b>PyUltroid -></b> <code>{}</code>\n🌀 <b>Python -></b> <code>{}</code>\n🌀 <b>Uptime -></b> <code>{}</code>\n🌀 <b>Branch -></b> [ {} ]\n\n• <b>Join @TheUltroid</b>"
+in_alive = "{}\n\n🌀 <b>Ultroid Version -><b> <code>{}</code>\n🌀 <b>PyUltroid -></b> <code>{}</code>\n🌀 <b>Python -></b> <code>{}</code>\n🌀 <b>Uptime -></b> <code>{}</code>\n🌀 <b>Branch -></b> [ {} ]\n\n• <b>Join @ZedThon</b>"
 
 
-@callback("alive")
+@callback("فحص")
 async def alive(event):
     text = alive_txt.format(ultroid_version, UltVer, __version__)
     await event.answer(text, alert=True)
 
 
 @ultroid_cmd(
-    pattern="alive( (.*)|$)",
+    pattern="فحص( (.*)|$)",
 )
 async def lol(ult):
     match = ult.pattern_match.group(1).strip()
@@ -161,7 +161,7 @@ async def lol(ult):
             kk,
         )
         if a := udB.get_key("ALIVE_EMOJI"):
-            als = als.replace("✵", a)
+            als = als.replace("⎆┊", a)
     if pic:
         try:
             await ult.reply(
@@ -196,7 +196,7 @@ async def lol(ult):
     )
 
 
-@ultroid_cmd(pattern="ping$", chats=[], type=["official", "assistant"])
+@ultroid_cmd(pattern="بنك$", chats=[], type=["official", "assistant"])
 async def _(event):
     start = time.time()
     x = await event.eor("Pong !")
@@ -206,7 +206,7 @@ async def _(event):
 
 
 @ultroid_cmd(
-    pattern="cmds$",
+    pattern="الاوامر$",
 )
 async def cmds(event):
     await allcmds(event, Telegraph)
@@ -216,7 +216,7 @@ heroku_api = Var.HEROKU_API
 
 
 @ultroid_cmd(
-    pattern="restart$",
+    pattern="اعاده تشغيل$",
     fullsudo=True,
 )
 async def restartbt(ult):
@@ -234,7 +234,7 @@ async def restartbt(ult):
 
 
 @ultroid_cmd(
-    pattern="shutdown$",
+    pattern="ايقاف$",
     fullsudo=True,
 )
 async def shutdownbot(ult):
@@ -242,7 +242,7 @@ async def shutdownbot(ult):
 
 
 @ultroid_cmd(
-    pattern="logs( (.*)|$)",
+    pattern="السجل( (.*)|$)",
     chats=[],
 )
 async def _(event):
@@ -267,7 +267,7 @@ async def _(event):
     await event.try_delete()
 
 
-@in_pattern("alive", owner=True)
+@in_pattern("فحص", owner=True)
 async def inline_alive(ult):
     pic = udB.get_key("ALIVE_PIC")
     if isinstance(pic, list):
@@ -308,7 +308,7 @@ async def inline_alive(ult):
                     await builder.document(
                         pic,
                         title="Inline Alive",
-                        description="@TheUltroid",
+                        description="@ZedThon",
                         parse_mode="html",
                         buttons=buttons,
                     )
@@ -318,13 +318,13 @@ async def inline_alive(ult):
             LOGS.info(er)
     result = [
         await builder.article(
-            "Alive", text=als, parse_mode="html", link_preview=False, buttons=buttons
+            "فحص", text=als, parse_mode="html", link_preview=False, buttons=buttons
         )
     ]
     await ult.answer(result)
 
 
-@ultroid_cmd(pattern="update( (.*)|$)")
+@ultroid_cmd(pattern="تحديث( (.*)|$)")
 async def _(e):
     xx = await e.eor(get_string("upd_1"))
     if HOSTED_ON == "heroku" or (
