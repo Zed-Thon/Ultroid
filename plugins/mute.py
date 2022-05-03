@@ -143,7 +143,7 @@ async def _(e):
 
 
 @ultroid_cmd(
-    pattern="unmute( (.*)|$)",
+    pattern="الغاء كتم( (.*)|$)",
     admins_only=True,
     manager=True,
 )
@@ -177,7 +177,7 @@ async def _(e):
 
 
 @ultroid_cmd(
-    pattern="mute( (.*)|$)", admins_only=True, manager=True, require="ban_users"
+    pattern="كتم( (.*)|$)", admins_only=True, manager=True, require="ban_users"
 )
 async def _(e):
     xx = await e.eor("`Muting...`")
