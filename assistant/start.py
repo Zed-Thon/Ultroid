@@ -24,12 +24,12 @@ custom_info = True
 if Owner_info_msg is None:
     custom_info = False
     Owner_info_msg = f"""
-**Owner** - {OWNER_NAME}
-**OwnerID** - `{OWNER_ID}`
+**- المـالك** - {OWNER_NAME}
+**- الايـدي** - `{OWNER_ID}`
 
-**Message Forwards** - {udB.get_key("PMBOT")}
+**- الرسـائل المـوجهه** - {udB.get_key("PMBOT")}
 
-**Ultroid [v{ultroid_version}](https://github.com/TeamUltroid/Ultroid), powered by @TeamUltroid**
+**- زدثـــون [v{ultroid_version}](https://t.me/ZedThon), مطـور السـورس  @zzzzl1l**
 """
 
 
@@ -39,26 +39,26 @@ _settings = [
         Button.inline("Pᴍ Bᴏᴛ", data="cbs_chatbot"),
     ],
     [
-        Button.inline("Aʟɪᴠᴇ", data="cbs_alvcstm"),
-        Button.inline("PᴍPᴇʀᴍɪᴛ", data="cbs_ppmset"),
+        Button.inline("الايبيـات", data="cbs_alvcstm"),
+        Button.inline("الحمـايـه", data="cbs_ppmset"),
     ],
     [
-        Button.inline("Fᴇᴀᴛᴜʀᴇs", data="cbs_otvars"),
-        Button.inline("VC Sᴏɴɢ Bᴏᴛ", data="cbs_vcb"),
+        Button.inline("آخـرى", data="cbs_otvars"),
+        Button.inline("بـوت الاغـاني", data="cbs_vcb"),
     ],
-    [Button.inline("« Bᴀᴄᴋ", data="mainmenu")],
+    [Button.inline("« رجـوع", data="mainmenu")],
 ]
 
 _start = [
     [
-        Button.inline("Lᴀɴɢᴜᴀɢᴇ 🌐", data="lang"),
-        Button.inline("Sᴇᴛᴛɪɴɢs ⚙️", data="setter"),
+        Button.inline("اللغــه 🌐", data="lang"),
+        Button.inline("الاعـدادات ⚙️", data="setter"),
     ],
     [
-        Button.inline("Sᴛᴀᴛs ✨", data="stat"),
-        Button.inline("Bʀᴏᴀᴅᴄᴀsᴛ 📻", data="bcast"),
+        Button.inline("الحــاله ✨", data="stat"),
+        Button.inline("الاذاعــه 📻", data="bcast"),
     ],
-    [Button.inline("TɪᴍᴇZᴏɴᴇ 🌎", data="tz")],
+    [Button.inline("المنطقـه الزمنيـه 🌎", data="tz")],
 ]
 
 
@@ -68,10 +68,10 @@ async def own(event):
         mention=event.sender.mention, me=inline_mention(ultroid_bot.me)
     )
     if custom_info:
-        msg += "\n\n• Powered by **@TheUltroid**"
+        msg += "\n\n• بواسطــة **@ZedThon**"
     await event.edit(
         msg,
-        buttons=[Button.inline("Close", data="closeit")],
+        buttons=[Button.inline("اغـلاق", data="closeit")],
         link_preview=False,
     )
 
@@ -114,7 +114,7 @@ async def ultroid(event):
             await event.reply(
                 f"Hey there {mention}, this is Ultroid Assistant of {me}!\n\n{ok}",
                 file=udB.get_key("STARTMEDIA"),
-                buttons=[Button.inline("Info.", data="ownerinfo")]
+                buttons=[Button.inline("المـالك", data="ownerinfo")]
                 if Owner_info_msg
                 else None,
             )
@@ -122,7 +122,7 @@ async def ultroid(event):
             await event.reply(
                 udB.get_key("STARTMSG").format(me=me, mention=mention),
                 file=udB.get_key("STARTMEDIA"),
-                buttons=[Button.inline("Info.", data="ownerinfo")]
+                buttons=[Button.inline("المـالك", data="ownerinfo")]
                 if Owner_info_msg
                 else None,
             )
@@ -130,7 +130,7 @@ async def ultroid(event):
         name = get_display_name(event.sender)
         if args == "set":
             await event.reply(
-                "Choose from the below options -",
+                "اختـر احـد الخيـارات التاليـه -",
                 buttons=_settings,
             )
         elif args:
@@ -159,7 +159,7 @@ async def ultroid(event):
 @callback("stat", owner=True)
 async def botstat(event):
     ok = len(get_all_users("BOT_USERS"))
-    msg = """Ultroid Assistant - Stats
+    msg = """ZThon Assistant - Stats
 Total Users - {}""".format(
         ok,
     )
@@ -201,7 +201,7 @@ Total Users in Bot - {len(ok)}
 @callback("setter", owner=True)
 async def setting(event):
     await event.edit(
-        "Choose from the below options -",
+        "اختـر احـد الخيـارات التاليـه -",
         buttons=_settings,
     )
 
@@ -214,7 +214,7 @@ async def timezone_(event):
     name = "Timezone"
     async with event.client.conversation(pru) as conv:
         await conv.send_message(
-            "Send Your TimeZone From This List [Check From Here](http://www.timezoneconverter.com/cgi-bin/findzone.tzc)"
+            "- ارسـل الي منطقتـك الزمنيـه الخاصـه بدولتـك من الموقـع التالـي [اضغـط هنـا](http://www.timezoneconverter.com/cgi-bin/findzone.tzc)"
         )
         response = conv.wait_event(events.NewMessage(chats=pru))
         response = await response
