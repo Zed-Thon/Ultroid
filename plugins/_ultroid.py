@@ -34,7 +34,7 @@ ULTSTRING = """🎇 **Thanks for Deploying Ultroid Userbot!**
 
 
 @ultroid_cmd(
-    pattern="repo$",
+    pattern="السورس$",
     manager=True,
 )
 async def repify(e):
@@ -53,7 +53,7 @@ async def repify(e):
     await e.eor(REPOMSG)
 
 
-@ultroid_cmd(pattern="ultroid$")
+@ultroid_cmd(pattern="زدثون$")
 async def useUltroid(rs):
     button = Button.inline("Start >>", "initft_2")
     msg = await asst.send_message(
